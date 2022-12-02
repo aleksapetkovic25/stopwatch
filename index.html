@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stopwatch.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <title>Stopwatch</title>
+</head>
+<body>
+    <h1>Stopwatch</h1>
+    <div id="container" class="container">
+        <div class="time">
+            <span id="hours" class="hours"></span>
+            <span id="minutes" class="minutes">00</span>
+            <span>:</span>
+            <span id="seconds" class="seconds">00</span>
+        </div>
+        <svg width="300" height="300">
+            <circle id="circle1" cx="150" cy="150" r="120"></circle>
+            <circle id="circle2" cx="150" cy="150" r="120"></circle>
+        </svg>
+    </div>
+    
+    <div class="btn-container">
+        <button onclick="start()" id="start" class="start-btn">Start</button>
+        <button onclick="stop()" id="stop" class="stop-btn hidden-btn">Stop</button>
+        <button onclick="lap()" id="lap" class="lap-btn hidden-btn">Lap</button>
+        <button onclick="reset()" id="reset" class="reset-btn hidden-btn">Reset</button>
+    </div>
+    
+
+    <div id="laps-container" class="laps-container"></div>
+    <script src="stopwatch.js"></script>
+</body>
+</html>
